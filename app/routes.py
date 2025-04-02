@@ -4,6 +4,9 @@ from app import app, db
 from app.models import Item
 from datetime import datetime, UTC
 
+"""
+    Aréa responsável por criar as rotas, a lógica de cada página e a renderização dos templates
+"""
 
 @app.route('/')
 def index():
