@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Create Item</h1>
+<form method="POST">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+        <label for="service">Serviço</label>
+        <input type="text" class="form-control" id="service" name="service">
+    </div>
+
+    <div class="form-group">
+        <label for="date">Serviço</label>
+        <input type="text" class="form-control" id="aaa" name="service">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add na agenda</button>
+</form>
+{% endblock %}

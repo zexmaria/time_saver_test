@@ -1,0 +1,10 @@
+# IDES
+
+.idea
+
+# VIRTUAL ENV
+.venv
+
+# DEV SCRIPTS
+
+reset_db.py
