@@ -3,11 +3,41 @@
 {% block content %}
 <h1>AGENDA VIRTUAL</h1>
 <a href="{{ url_for('create') }}" class="btn btn-primary">NOVO AGENDAMENTO</a>
+
+<br>
+<br>
+<p>Filtrar:</p>
+<form method="GET" action="{{ url_for('index') }}" class="d-flex gap-2 mb-3">
+
+    <select name="name" class="form-control">
+        <option value="">Todos os Clientes</option>
+        {% for n in all_names %}
+            <option value="{{ n }}" {% if n == name %}selected{% endif %}>{{ n }}</option>
+        {% endfor %}
+    </select>
+
+
+    <select name="service" class="form-control">
+        <option value="">Todos os Serviços</option>
+        {% for s in all_services %}
+            <option value="{{ s }}" {% if s == service %}selected{% endif %}>{{ s }}</option>
+        {% endfor %}
+    </select>
+
+
+    <input type="date" name="date" class="form-control" value="{{ date }}">
+
+
+    <button type="submit" class="btn btn-primary">Buscar</button>
+</form>
+
+
 <table class="table">
     <thead>
         <tr>
-            <th>Criar pedido</th>
-            <th>Prcurar pedido</th>
+            <th>Cliente</th>
+            <th>Serviço solicitado</th>
+            <td>Data do pedido</td>
 
         </tr>
     </thead>
@@ -16,11 +46,18 @@
         <tr>
             <td>{{ item.name }}</td>
             <td>{{ item.service }}</td>
+            <td>{{ item.date }}</td>
             <td>
                 <a href="{{ url_for('update', id=item.id) }}" class="btn btn-warning">Edit</a>
                 <a href="{{ url_for('delete', id=item.id) }}" class="btn btn-danger">Delete</a>
             </td>
         </tr>
+
+
+
+
+
+
         {% endfor %}
     </tbody>
 </table>

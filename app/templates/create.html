@@ -1,20 +1,26 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Create Item</h1>
+<h1>Novo agendamento</h1>
 <form method="POST">
     <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" name="name" required>
-    </div>
-    <div class="form-group">
-        <label for="service">Serviço</label>
-        <input type="text" class="form-control" id="service" name="service">
+        <label for="name">Nome do Cliente</label>
+        <input type="name" class="form-control" id="name" name="name" required>
     </div>
 
     <div class="form-group">
-        <label for="date">Serviço</label>
-        <input type="text" class="form-control" id="aaa" name="service">
+        <label for="service">Serviço Solicitado</label>
+        <input type="service" class="form-control" id="service" name="service">
+    </div>
+
+    <div class="form-group">
+        <label for="date">Data</label>
+        <input type="date" class="form-control" name="date"  required value="{{ current_date }}">
+    </div>
+
+    <div class="form-group">
+        <label for="time">Hora</label>
+        <input type="time" class="form-control" name="time"  required value="{{ current_time }}">
     </div>
 
     <button type="submit" class="btn btn-primary">Add na agenda</button>
