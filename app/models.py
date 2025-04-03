@@ -8,4 +8,3 @@ class Item(db.Model):
     service = db.Column(db.String(100), nullable=True)
     date = db.Column(db.Date, default=datetime.now(UTC).date, nullable=False)
     time = db.Column(db.Time, default=datetime.now(UTC).time, nullable=False)
-

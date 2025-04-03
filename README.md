@@ -52,7 +52,7 @@ Se não estiver instalado, siga os passos abaixo para baixar e instalar:
 https://pypi.org/project/pip/
 
 
-### 🧩Git
+### 🧬Git
 
 1. Verifique se o Git está instalado.
 
@@ -100,6 +100,41 @@ Com ambiente virtual ativo, instale as dependências do projeto com o comando ab
 ````pip install -r requirements.txt````
 
 ***
+
+## 🛠️ Configurando o Banco de Dados MySQL
+
+1. Instale o MySQL Server
+
+Caso não tenha o MySQL instalado, instale com o comando:
+
+````sudo apt install mysql-server -y````
+
+Após a instalação, inicie o serviço:
+
+`````sudo systemctl start mysql`````
+
+2. Acesse o MySQL e crie o banco de dados
+
+Entre no MySQL com o seguinte comando:
+
+````mysql -u root -p````
+
+Digite sua senha e, dentro do console MySQL, execute:
+
+````CREATE DATABASE agenda_db;````
+
+3. Crie as tabelas do banco
+
+Com o ambiente virtual ativado, execute o seguinte comando para criar as tabelas no banco:
+
+````
+from app import db
+db.create_all() 
+````
+
+***
+
+
 ## ⚙️Rodando o Projeto Localmente
 
 1. Popule o banco de dados com agendamentos fictícios executando o comando:

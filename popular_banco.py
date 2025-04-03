@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 from app import db, app
 from app.models import Item
 
-names = ["Alice", "Bruno", "Carla", "Diego", "Elisa", "Fernando", "Julia", "Henrique", "Isabela", "João", "Luiza"]
+names = ["Alice", "Breno", "Carla", "Diego", "Elisa", "Fernando", "Julia", "Henrique", "Isabela", "João", "Luiza"]
 
 services = ["Consulta Geral", "Exame de Rotina", "Psicologia", "Fisioterapia", "Odontologia", "Psiquiatria"]
 

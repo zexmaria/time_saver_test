@@ -1,4 +1,3 @@
-from email.policy import default
 from flask import request, redirect, url_for, render_template
 from app import app, db
 from app.models import Item
